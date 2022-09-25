@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+
+<launch>
+    <node pkg="tf2_ros" type="static_transform_publisher" name="static_tf_imu" args="0.17 0 0 -0.0069813 0.0401426 0 base_link imu"/>
+    <node pkg="imu_debugger" type="imu_debugger" name="imu_debugger" output="screen"/>
+    <node pkg="rosbag" type="play" name="play" args="$(env HOME)/bagfiles/rwrc/test_imu.bag" output="screen"/>
+</launch>
