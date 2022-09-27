@@ -14,7 +14,7 @@ void IMUDebugger::imu_callback(const sensor_msgs::Imu::ConstPtr& msg)
     try
     {
         const geometry_msgs::TransformStamped trans = tf_buffer_.lookupTransform("base_link", "imu", ros::Time(0));
-        /* tf2::doTransform(*msg, imu_data_, trans); */
+        tf2::doTransform(imu_data_, imu_data_, trans);
     }
     catch(tf2::TransformException& ex)
     {

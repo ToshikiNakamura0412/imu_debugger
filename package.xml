@@ -55,6 +55,9 @@
   <build_export_depend>std_msgs</build_export_depend>
   <exec_depend>roscpp</exec_depend>
   <exec_depend>std_msgs</exec_depend>
+  <depend>tf2_sensor_msgs</depend>
+  <!-- <depend>drive_ros_msgs</depend> -->
+
 
 
   <!-- The export tag contains other, unspecified, tags -->
